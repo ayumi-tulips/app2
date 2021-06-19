@@ -28,8 +28,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener
             if(addtext1.text.isNotEmpty()) {
                 addtext1.text.toString().toDouble()
             } else {
-                //                Snackbar.make(v!!, "1つ目の値が未入力です。", Snackbar.LENGTH_SHORT).show()
-              Snackbar.make(v)
+                Snackbar.make(v!!, "2つ目の値が未入力です。", Snackbar.LENGTH_SHORT).show()
 
                     return
             }
