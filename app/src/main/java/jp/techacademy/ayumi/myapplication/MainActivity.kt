@@ -44,10 +44,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener
         // 答えを計算する
         var result =
             when (v!!.id) {
-                R.id.buttonAdd -> value1 + value2
-                R.id.buttonSub -> value1 - value2
-                R.id.buttonMul -> value1 * value2
-                R.id.buttonDiv -> {
+                R.id.buttonadd -> value1 + value2
+                R.id.Buttonsub -> value1 - value2
+                R.id.Buttonmul -> value1 * value2
+                R.id.buttondiv -> {
                     if (value2 == 0.0) {
                         Snackbar.make(v, "0で割ることはできません。", Snackbar.LENGTH_SHORT).show()
                         return
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener
                 else -> 0.0
             }
         // 答えを送る
-        val intent = Intent(this, SecondActivity::class.java)
+        val intent = Intent(this, Secondactivity::class.java)
         intent.putExtra("RESULT", result)
         startActivity(intent)
     }

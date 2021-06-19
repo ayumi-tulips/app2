@@ -7,11 +7,15 @@ import java.util.stream.IntStream
 //import kotlinx.android.synthetic.main.activity_Secondactivity.*
 
 class Secondactivity : AppCompatActivity() {
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_secondactivity)
 
-    override  fun onCreate(savedIntStream: Bundle?){
-super.onCreate(savedInstanceState: Bundle?)
-setContentview(R.layout.activity_secondactivity)}
+    override  fun onCreate(savedInstanceState: Bundle?){
+        super.onCreate(savedInstanceState )
+         setContentview(R.layout.activity_secondactivity)
+        // 答えを受け取る
+        val intent = intent
+        val value1 = intent.getDoubleExtra("RESULT", 0.0)
+        // 答えを表示する
+        textView.text = value1.toString()
+
+    }
 }
